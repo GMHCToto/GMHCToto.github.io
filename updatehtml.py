@@ -22,16 +22,28 @@ cleanSheets = 0
 for i in playerdata:
     if i["data"]["goals"] > goalsAmount:
         goalsAmount = i["data"]["goals"]
-        topGoals = i["name"]
+        topGoals = [i["name"]]
+    elif i["data"]["goals"] == goalsAmount:
+        topGoals.append(i["name"])
+
     if i["data"]["assists"] > assistsAmount:
         assistsAmount = i["data"]["assists"]
-        topAssist = i["name"]
+        topAssist = [i["name"]]
+    elif i["data"]["assists"] == assistsAmount:
+        topAssist.append(i["name"])
+
     if i["data"]["kaarten"] > cardsAmount:
         cardsAmount = i["data"]["kaarten"]
-        topCards = i["name"]
+        topCards = [i["name"]]
+    elif i["data"]["kaarten"] == cardsAmount:
+        topCards.append(i["name"])
+
     if i["data"]["motm"] > motmAmount:
         motmAmount = i["data"]["motm"]
-        topMotm = i["name"]
+        topMotm = [i["name"]]
+    elif i["data"]["motm"] == motmAmount:
+        topMotm.append(i["name"])
+
 results = hw.get_results("N3706","N11")
 
 #results.append({"home_team": {"club_name": "Goudse MHC"}, "away_team":{"club_name":"K.H.C. Strawberries"},"home_score":0,"away_score":0})
@@ -79,6 +91,7 @@ for filename in os.listdir(path):
             awayCorrect = wedstrijden_parsed[i]["Uit"]
             homeGuess = df.at[i, "Thuis score"]
             awayGuess = df.at[i, "Uit score"]
+
             if homeGuess > awayGuess and homeCorrect > awayCorrect:
                 punten = 2
                 total_points += 2
@@ -88,7 +101,10 @@ for filename in os.listdir(path):
             elif homeGuess < awayGuess and homeCorrect < awayCorrect:
                 punten = 2
                 total_points += 2
-            if homeGuess == homeCorrect and awayGuess == awayCorrect:
+            if homeGuess == homeCorrect:
+                punten += 2
+                total_points += 2
+            if  awayGuess == awayCorrect:
                 punten += 2
                 total_points += 2
             
@@ -136,36 +152,36 @@ for filename in os.listdir(path):
         watGaatHeren1Doen = "Handhaven"
 
     df.at[0,"Correct"] = watGaatHeren1Doen
-    df.at[1,"Correct"] = topGoals
+    df.at[1,"Correct"] = ", ".join(topGoals)
     df.at[2,"Correct"] = goalsAmount
-    df.at[3,"Correct"] = topAssist
+    df.at[3,"Correct"] = ", ".join(topAssist)
     df.at[4,"Correct"] = assistsAmount
-    df.at[5,"Correct"] = topMotm
-    df.at[6,"Correct"] = topCards
+    df.at[5,"Correct"] = ", ".join(topMotm)
+    df.at[6,"Correct"] = ", ".join(topCards)
     df.at[7,"Correct"] = cleanSheets
     for i in range(8):
         df.at[i, "Punten"] = 0
     if watGaatHeren1Doen == df.at[0,"Antwoord"]:
         df.at[0,"Punten"] = 5
         total_points += 5
-    if df.at[1,"Antwoord"] == topGoals:
+    if df.at[1,"Antwoord"] in topGoals:
         df.at[1,"Punten"] = 5
         total_points += 5
     diff = abs(goalsAmount - int(df.at[2, "Antwoord"]))
     if diff < 10:
         df.at[2, "Punten"] = 10 - diff
         total_points += 10 - diff
-    if df.at[3,"Antwoord"] == topAssist:
+    if df.at[3,"Antwoord"] in topAssist:
         df.at[3,"Punten"] = 5
         total_points += 5
     diff = abs(assistsAmount - int(df.at[4, "Antwoord"]))
     if diff < 10:
         df.at[4, "Punten"] = 10 - diff
         total_points += 10 - diff
-    if df.at[5, "Antwoord"] == topMotm:
+    if df.at[5, "Antwoord"] in topMotm:
         df.at[5, "Punten"] = 5
         total_points += 5
-    if df.at[6, "Antwoord"] == topCards:
+    if df.at[6, "Antwoord"] in topCards:
         df.at[6, "Punten"] = 5
         total_points += 5
     diff = abs(cleanSheets - int(df.at[7, "Antwoord"]))
