@@ -61,7 +61,7 @@ matches = [["Goudse MHC", "K.H.C. Strawberries"],
 ]
 match_index = 0
 wedstrijden_parsed = []
-for i in results:
+for i in results[::-1]:
     if match_index > len(matches):
         break
     if i["home_team"]["club_name"] == matches[match_index][0] and i["away_team"]["club_name"] == matches[match_index][1]:
