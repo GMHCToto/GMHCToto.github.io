@@ -5,7 +5,7 @@
             "goals": 0,
             "assists": 0,
             "kaarten": 0,
-            "motm": 0
+            "motm": 1
         }
     },
     {
@@ -66,7 +66,7 @@
         "name": "Wessel Gratama van Andel",
         "data": {
             "goals": 0,
-            "assists": 0,
+            "assists": 1,
             "kaarten": 0,
             "motm": 0
         }
@@ -74,9 +74,9 @@
     {
         "name": "Laurens van Hooft",
         "data": {
-            "goals": 0,
+            "goals": 1,
             "assists": 0,
-            "kaarten": 0,
+            "kaarten": 1,
             "motm": 0
         }
     },
@@ -93,7 +93,7 @@
         "name": "Matthijs Koenst",
         "data": {
             "goals": 0,
-            "assists": 0,
+            "assists": 1,
             "kaarten": 0,
             "motm": 0
         }
@@ -103,7 +103,7 @@
         "data": {
             "goals": 0,
             "assists": 1,
-            "kaarten": 0,
+            "kaarten": 1,
             "motm": 0
         }
     },
@@ -137,7 +137,7 @@
     {
         "name": "Mees Roosen",
         "data": {
-            "goals": 4,
+            "goals": 5,
             "assists": 0,
             "kaarten": 0,
             "motm": 1
@@ -167,6 +167,15 @@
             "goals": 0,
             "assists": 0,
             "kaarten": 0,
+            "motm": 0
+        }
+    },
+    {
+        "name":"Marc Becht",
+        "data": {
+            "goals": 0,
+            "assists": 0,
+            "kaarten": 1,
             "motm": 0
         }
     }
