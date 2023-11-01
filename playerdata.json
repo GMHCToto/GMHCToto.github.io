@@ -2,7 +2,7 @@
     {
         "name": "Olivier Abee",
         "data": {
-            "goals": 2,
+            "goals": 3,
             "assists": 2,
             "kaarten": 0,
             "motm": 1
@@ -21,7 +21,7 @@
         "name": "Tycho Berend",
         "data": {
             "goals": 0,
-            "assists": 1,
+            "assists": 2,
             "kaarten": 0,
             "motm": 0
         }
@@ -29,10 +29,10 @@
     {
         "name": "Olivier van den Bergh",
         "data": {
-            "goals": 0,
+            "goals": 1,
             "assists": 0,
-            "kaarten": 0,
-            "motm": 0
+            "kaarten": 1,
+            "motm": 1
         }
     },
     {
@@ -47,7 +47,7 @@
     {
         "name": "Sander van Duffelen",
         "data": {
-            "goals": 2,
+            "goals": 3,
             "assists": 1,
             "kaarten": 0,
             "motm": 0
@@ -56,8 +56,8 @@
     {
         "name": "Hidde Frenk",
         "data": {
-            "goals": 11,
-            "assists": 7,
+            "goals": 13,
+            "assists": 9,
             "kaarten": 2,
             "motm": 2
         }
@@ -74,7 +74,7 @@
     {
         "name": "Laurens van Hooft",
         "data": {
-            "goals": 1,
+            "goals": 2,
             "assists": 0,
             "kaarten": 2,
             "motm": 1
@@ -84,7 +84,7 @@
         "name": "Rinse Kloek",
         "data": {
             "goals": 1,
-            "assists": 1,
+            "assists": 2,
             "kaarten": 0,
             "motm": 0
         }
@@ -92,7 +92,7 @@
     {
         "name": "Matthijs Koenst",
         "data": {
-            "goals": 0,
+            "goals": 1,
             "assists": 2,
             "kaarten": 0,
             "motm": 0
@@ -119,7 +119,7 @@
     {
         "name": "Daniel van Liempd",
         "data": {
-            "goals": 2,
+            "goals": 3,
             "assists": 2,
             "kaarten": 0,
             "motm": 0
@@ -148,7 +148,7 @@
         "data": {
             "goals": 3,
             "assists": 2,
-            "kaarten": 2,
+            "kaarten": 3,
             "motm": 0
         }
     },
