@@ -17,7 +17,7 @@ cardsAmount = -1
 topMotm = ""
 motmAmount = -1
 
-cleanSheets = 1
+cleanSheets = 2
 
 for i in playerdata:
     if i["data"]["goals"] > goalsAmount:
